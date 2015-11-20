@@ -1,68 +1,154 @@
-permalink   : /:title/
-markdown    : kramdown
-highlighter : pygments
 
-paginate: 2 #6
-comments: true
-paginate_path: "/page/:num"
+# Site settings
 
-baseurl: "/jekyll" # change to empty string ""
-domain_name: http://parsion.github.io
-google_analytics: UA-52446115-1
+url: "http://parsion.github.io"
 
-source:      source
-destination: _site
+# If you're hosting your site at a Project repository on GitHub pages
+# (https://yourusername.github.io/repository-name)
+# and NOT your user repository (https://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
 
-# cover: /assets/images/header-cover.png
+baseurl: /jekyll
 
-# site title, description, meta_description, meta_keywords
-# Details for the RSS feed generator
-name: Fernando Moreira
-title: Fernando Moreira | Desenvolvimento Web e tudo mais..
-description: "Desenvolvedor Front-end/Wordpress, Design Responsivo, HTML5, CSS3 e JavaScript"
-meta_description: "Desenvolvedor Front-end/Wordpress, Design Responsivo, HTML5, CSS3 e JavaScript"
-meta_keywords: "site, website, loja virtual, lojas virtuais, e-commerce, wordpress, frontend, front-end, html5, css3, javascript, jquery, seo, otimizacao, performance"
-url: http://nandomoreira.me
-production_url: http://nandomoreira.me
-repo: https://github.com/nandomoreirame/nandomoreira-jekyll-theme
-disqus_shortname: "fernandomoreira"
-rss_path: source/
-author:
-  name      : Fernando Moreira
-  image     : /assets/images/author.jpg
-  email     : nandomoreira.me@gmail.com
-  url       : http://nandomoreira.me
-  facebook  : http://facebook.com/fernando.dev
-  twitter   : http://twitter.com/nandomoreirame
-  instagram : http://instagram.com/nandomoreira.me
-  github    : http://github.com/nandomoreirame
-  linkedin  : http://linkedin.com/in/nandomoreirame
-  bio       : "Desenvolvedor Front-end/Wordpress entusiasta de performance, design responsivo e usabilidade, sempre em busca do melhor projeto e de um bom café."
+# Google tracking id to track your visitors
 
-# thought
-thought:
-  text: I have no special talent. I am only passionately curious.
-  author: Albert Einstein
+google-tracking-id: ""
 
-# Plugin: jekyll-assets
-assets:
-  dirname: /assets
-  baseurl: /nandomoreira-jekyll-theme/assets/ # change to /assets/
-  sources:
-    - assets/images
-    - assets/fonts
-    - assets/css
-    - assets/js
-  cache: true
-  gzip: [ text/css, application/javascript ]
+# Forces https everywhere in your website, except when you serve it locally
+# If you are not hosted on Github Pages, and your host doesn't support https
+# then you should disable it
 
-# Compress HTML
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  ignore:
-    envs: all
+force-https: True
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+syntax-highlight: True
+
+# Sections shown in the index page
+
+pages_list:
+  About: 'about'
+  Blog: 'latest-post'
+  Timeline: 'timeline'
+  Contact: 'contact'
+
+web-app-mode: True
+
+# Icons for Chrome Web App mode https://developer.chrome.com/multidevice/android/installtohomescreen
+icon-36p: "/img/web-app/icon-36p.png"
+icon-48p: "/img/web-app/icon-48p.png"
+icon-72p: "/img/web-app/icon-72p.png"
+icon-96p: "/img/web-app/icon-96p.png"
+icon-144p: "/img/web-app/icon-144p.png"
+icon-192p: "/img/web-app/icon-192p.png"
+
+#############
+# HTML Head #
+#############
+
+author: "John Smith"
+lang: "en"
+title: "{ John Smith }"
+favicon: "/img/favicon.ico"
+description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
+keywords: "smith, jones, personal, jekyll, theme"
+
+################
+# Intro layout #
+################
+
+black-favicon: "/img/black-lab-glass.ico"
+background-img: "../img/intro-bg.jpg"
+me-img: "/img/jetpacktocat.png"
+
+##############################
+# Dynamic Text on the header #
+##############################
+
+dynamic-typing: True
+shuffle: True	# Shuffle the lines.
+loop: True
+loop-count:	False # Set False for infinite loop, or set any number for finite loop.
+type-speed:	10		# Default 10
+start-delay: 200	# Default 200
+delete-delay: 5000	# Default 5000
+lines:			# You can add HTML Tags in the Text
+  - text: "The lower you fall, the higher you'll fly."
+  - text: "Where’s your will to be weird?"
+
+########
+# Blog #
+########
+
+post-preview-words: 96
+
+paginate: 5
+
+fb-share: True
+twitter-share: True
+reddit-share: True
+google-plus-share: True
+linkedin-share: True
+pinterest-share: True
+vkontakte-share: True
+disqus-shortname: "panossakkos"
+
+###############
+# Life Events #
+###############
+
+events:
+  - image: "/img/career/spidertocat.png"
+    date: "September 2013 - Today"
+    description: "Saving the neighborhood!"
+  - image: "/img/career/baracktocat.jpg"
+    date: "September 2007 - August 2013"
+    description: "Started coding"
+
+# First image of the Career timeline
+career-img: "/img/career/default.png"
+
+##################
+# Contact layout #
+##################
+
+email: "your@email.here"
+
+##################
+# Social Buttons #
+##################
+
+social:
+  - title: "facebook"
+    url: "https://facebook.com/"
+  - title: "twitter"
+    url: "https://twitter.com/"
+  - title: "github"
+    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
+  - title: "bitcoin"
+    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+  - title: "rss"
+    url: "/feed.xml"
+
+############
+# 404 page #
+############
+
+404-img: "/img/labtocat.png"
+
+################################################################################
+
+# Tread carefully if you want to change the variables below this point!
+
+# Exclusion list from the generated _site
+
+exclude: ["LICENSE", "README", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
+
+# Pagination path
+
+paginate_path: "blog/page:num/"
+
+# Enable minification SASS
+
+sass:
+  style: compressed
+
+gems: [jekyll-paginate]
